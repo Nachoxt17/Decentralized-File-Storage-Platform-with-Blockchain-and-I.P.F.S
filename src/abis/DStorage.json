@@ -1,0 +1,317 @@
+{
+  "contractName": "DStorage",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Public/Documents/Personal-Programming-Proyects/Decentralized-File-Storage-Platform-with-Blockchain-and-I.P.F.S/src/contracts/DStorage.sol\":\"DStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Public/Documents/Personal-Programming-Proyects/Decentralized-File-Storage-Platform-with-Blockchain-and-I.P.F.S/src/contracts/DStorage.sol\":{\"keccak256\":\"0x9164279f58f0b2419d310210d3bb0eb485ab78bb310ce08831eeec9b97102f2a\",\"urls\":[\"bzz-raw://6ff030d6675bfba6997388a99a4216dce1662d6f47b8b6259a62da7cecaa8f9a\",\"dweb:/ipfs/QmSgniCcykdYfb5idPj9QRK7458rzqhHCNMc18PQJhMSWN\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280600881526020017f4453746f726167650000000000000000000000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b610186806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a723158201e83e54781d56f07e52fd06015c7b84a3b469fe26ee3cf8a22c5c6ec663366b964736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a723158201e83e54781d56f07e52fd06015c7b84a3b469fe26ee3cf8a22c5c6ec663366b964736f6c63430005100032",
+  "sourceMap": "27:549:0:-;;;50:31;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;171:27;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:27:0;27:549;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "27:549:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:549:0;;;;;;;;;;;;;;;;;;;50:31;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;50:31:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract DStorage {\r\n  string public name = \"DStorage\";\r\n  // Number of files\r\n  // Mapping fileId=>Struct \r\n\r\n  // Struct\r\n\r\n\r\n  // Event\r\n\r\n  constructor() public {\r\n  }\r\n\r\n  // Upload File function\r\n\r\n    // Make sure the file hash exists\r\n\r\n    // Make sure file type exists\r\n\r\n    // Make sure file description exists\r\n\r\n    // Make sure file fileName exists\r\n\r\n    // Make sure uploader address exists\r\n\r\n    // Make sure file size is more than 0\r\n\r\n\r\n    // Increment file id\r\n\r\n    // Add File to the contract\r\n\r\n    // Trigger an event\r\n\r\n}",
+  "sourcePath": "C:/Users/Public/Documents/Personal-Programming-Proyects/Decentralized-File-Storage-Platform-with-Blockchain-and-I.P.F.S/src/contracts/DStorage.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Public/Documents/Personal-Programming-Proyects/Decentralized-File-Storage-Platform-with-Blockchain-and-I.P.F.S/src/contracts/DStorage.sol",
+    "exportedSymbols": {
+      "DStorage": [
+        9
+      ]
+    },
+    "id": 10,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9,
+        "linearizedBaseContracts": [
+          9
+        ],
+        "name": "DStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 9,
+            "src": "50:31:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "50:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "4453746f72616765",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "71:10:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_71e44b0df098e49b64e3e857f58efe89334156a79fe51150de7d54015483635f",
+                "typeString": "literal_string \"DStorage\""
+              },
+              "value": "DStorage"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7,
+              "nodeType": "Block",
+              "src": "192:6:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 8,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "182:2:0"
+            },
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "192:0:0"
+            },
+            "scope": 9,
+            "src": "171:27:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10,
+        "src": "27:549:0"
+      }
+    ],
+    "src": "0:576:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/Public/Documents/Personal-Programming-Proyects/Decentralized-File-Storage-Platform-with-Blockchain-and-I.P.F.S/src/contracts/DStorage.sol",
+      "exportedSymbols": {
+        "DStorage": [
+          9
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            9
+          ],
+          "name": "DStorage",
+          "scope": 10
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "name",
+              "scope": 9,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "50:6:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "4453746f72616765",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "string",
+                  "type": "literal_string \"DStorage\"",
+                  "value": "DStorage"
+                },
+                "id": 3,
+                "name": "Literal",
+                "src": "71:10:0"
+              }
+            ],
+            "id": 4,
+            "name": "VariableDeclaration",
+            "src": "50:31:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 9,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 5,
+                "name": "ParameterList",
+                "src": "182:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 6,
+                "name": "ParameterList",
+                "src": "192:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7,
+                "name": "Block",
+                "src": "192:6:0"
+              }
+            ],
+            "id": 8,
+            "name": "FunctionDefinition",
+            "src": "171:27:0"
+          }
+        ],
+        "id": 9,
+        "name": "ContractDefinition",
+        "src": "27:549:0"
+      }
+    ],
+    "id": 10,
+    "name": "SourceUnit",
+    "src": "0:576:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x8E7d766f7DBAdc9F3b4CC7b40deC073859297F67",
+      "transactionHash": "0xb67888854c32aed36c578b00d2144b7b7efb6b2b3f0adc1b7942ab4b28ece99c"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-03-30T20:48:26.511Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
