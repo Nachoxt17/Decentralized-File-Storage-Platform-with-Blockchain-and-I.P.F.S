@@ -5,7 +5,9 @@ import Main from './Main'
 import Web3 from 'web3';
 import './App.css';
 
-//Declare IPFS
+//+-Declare IPFS:_
+const ipfsClient = require('ipfs-http-client')
+const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) //(leaving out the arguments will default to these values).
 
 class App extends Component {
 
@@ -29,20 +31,20 @@ class App extends Component {
 
   async loadBlockchainData() {
     const web3 = window.web3
-    // Load account
+    //+-Load account:_
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
-    // Network ID
+    //+-Network ID:_
     const networkId = await web3.eth.net.getId()
     const networkData = DStorage.networks[networkId]
     if(networkData) {
-      // Assign contract
+      //+-Assign contract:_
       const dstorage = new web3.eth.Contract(DStorage.abi, networkData.address)
       this.setState({ dstorage })
-      // Get files amount
+      //+-Get files amount:_
       const filesCount = await dstorage.methods.fileCount().call()
       this.setState({ filesCount })
-      // Load files&sort by the newest
+      //+-Load files&sort by the newest:_
       for (var i = filesCount; i >= 1; i--) {
         const file = await dstorage.methods.files(i).call()
         this.setState({
@@ -54,34 +56,39 @@ class App extends Component {
     }
   }
 
-  // Get file from user
+  //+-Get file from user:_
   captureFile = event => {
   }
 
 
-  //Upload File
+  //+-Upload File:_
   uploadFile = description => {
 
-    //Add file to the IPFS
+    //+-Add file to the IPFS:_
 
-      //Check If error
-        //Return error
+      //+-Check If error:_
+        //+-Return error:_
 
-      //Set state to loading
+      //+-Set state to loading:_
 
-      //Assign value for the file without extension
+      //+-Assign value for the file without extension:_
 
-      //Call smart contract uploadFile function 
+      //+-Call smart contract uploadFile function:_
 
   }
 
-  //Set states
+  //+-Set states:_
   constructor(props) {
     super(props)
     this.state = {
+      account: '',
+      dstorage: null,
+      files: [],
+      loading: false,
+      type: null,
+      name: null
     }
-
-    //Bind functions
+    //+-Bind functions:_
   }
 
   render() {
