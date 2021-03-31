@@ -56,25 +56,56 @@ class App extends Component {
     }
   }
 
-  //+-Get file from user:_
+   //+-Get file from user:_
   captureFile = event => {
+    event.preventDefault()
+
+    const file = event.target.files[0]
+    const reader = new window.FileReader()
+
+    reader.readAsArrayBuffer(file)
+    reader.onloadend = () => {
+      this.setState({
+        buffer: Buffer(reader.result),
+        type: file.type,
+        name: file.name
+      })
+      console.log('buffer', this.state.buffer)
+    }
   }
 
 
   //+-Upload File:_
   uploadFile = description => {
+    console.log("Submitting file to I.P.F.S.");
 
-    //+-Add file to the IPFS:_
+    //+-Add file to the I.P.F.S.:_
+    ipfs.add(this.state.buffer, (error, result) => {
+      console.log('I.P.F.S. result', result);
 
-      //+-Check If error:_
-        //+-Return error:_
+      if(error) {
+        console.error(error);
+        return
+      }
 
-      //+-Set state to loading:_
-
+      this.setState({ loading: true });
       //+-Assign value for the file without extension:_
+      if(this.state.type === ''){
+        this.setState({type: 'none'})
+      }
 
-      //+-Call smart contract uploadFile function:_
-
+      this.state.dstorage.methods.uploadFile(result[0].hash, result[0].size, this.state.type, this.state.name, description).send({ from: this.state.account }).on('transactionHash', (hash) => {
+        this.setState({
+         loading: false,
+         type: null,
+         name: null
+       })
+       window.location.reload()
+      }).on('error', (e) =>{
+        window.alert('Error');
+        this.setState({loading: false});
+      });
+    });
   }
 
   //+-Set states:_
