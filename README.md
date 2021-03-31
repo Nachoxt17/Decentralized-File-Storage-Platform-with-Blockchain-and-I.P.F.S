@@ -5,7 +5,7 @@
 +-Users can connect their Cryptocurrencies Wallet to the Website which will also connect to the Blockchain where all the Website Code(Smart Contracts) and Data will be stored, except for the Files; in this case the Smart Contracts will store references(the File Hash) to the Files on the Platform which will be stored in the InterPlanetary File System.
 
 ## 🔧 Final Result:
-![Final Result](...)
+![Final Result](https://github.com/Nachoxt17/Decentralized-File-Storage-Platform-with-Blockchain-and-I.P.F.S/blob/main/Final-Result.png?raw=true)
 
 ## +-To run the Project:_ 
 +-(1)-Open, Configure and Execute Ganache and then Open the Project, open two terminals, and run the Command "truffle migrate --reset" in the First Console and then run the Command "npm run start" in the Second Console. 
