@@ -17,7 +17,7 @@ class Navbar extends Component {
           D$t0r@g3 - Decentralized File Storage Platform with Blockchain and I.P.F.S
         </a>
         <ul className="navbar-nav px-3">
-          <b className='text-white'>{'0x0'}</b>
+          <b className='text-white'>{this.props.account}</b>
         </ul>
       </nav>
     );

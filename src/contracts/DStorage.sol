@@ -19,7 +19,17 @@ contract DStorage {
     address payable uploader;
   }
 
-  //+-Event:_
+  //+-FileUpload Event:_
+  event FileUploaded(
+    uint fileId,
+    string fileHash,
+    uint fileSize,
+    string fileType,
+    string fileName,
+    string fileDescription,
+    uint uploadTime,
+    address payable uploader
+  );
 
   constructor() public {
   }
@@ -44,9 +54,7 @@ contract DStorage {
 
     files[fileCount] = File(fileCount, _fileHash, _fileSize, _fileType, _fileName, _fileDescription, now, msg.sender);
 
-
-    //+-Add File to the contract:_
-
-    //+-Trigger an event:_
+    //+-Trigger an Add File to the Contract Event:_
+    emit FileUploaded(fileCount, _fileHash, _fileSize, _fileType, _fileName, _fileDescription, now, msg.sender);
   }
 }
